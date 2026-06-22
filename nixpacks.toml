@@ -3,6 +3,8 @@ cmds = [
   "npm install",
   "npm run build",
   "composer install --no-dev --optimize-autoloader",
+  "mkdir -p storage/framework/sessions storage/framework/views storage/framework/cache/data storage/logs",
+  "chmod -R 775 storage bootstrap/cache",
   "php artisan storage:link",
   "php artisan config:cache",
   "php artisan route:cache",
